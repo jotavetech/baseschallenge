@@ -10,7 +10,7 @@ const Footer = () => {
       >
         github
       </a>
-      <ModeToggle />
+
       <a
         href="https://beacons.ai/jotavetech"
         target="_blank"

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ModeToggle from "./mode-toggle";
 
 const Header = () => {
   return (
@@ -14,7 +15,8 @@ const Header = () => {
           alt="bases challange logo"
         />
       </Link>
-      <div className="space-x-2">
+      <div className="space-x-2 flex items-center">
+        <ModeToggle />
         <Link href="/faq" aria-label="go to faq" className="inline lg:hidden">
           <button className="bg-button-bg-1 dark:bg-button-bg-1-dark text-primary dark:text-primary-dark font-medium px-2 rounded-xl hover:-translate-y-1">
             faq

@@ -12,7 +12,7 @@ const ModeToggle = () => {
   };
 
   return (
-    <div className="text-primary dark:text-primary-dark">
+    <div className="text-primary dark:text-primary-dark mx-2 lg:mx-5">
       <button
         className="hover:opacity-80 hover:scale-125"
         onClick={toggleTheme}
