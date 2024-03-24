@@ -8,7 +8,7 @@ const SelectSystem = ({ value, onChange }: SelectSystemProps) => {
     <select
       onChange={onChange}
       value={value}
-      className="rounded-xl bg-button-bg-2 text-xs font-medium px-3 py-1"
+      className="rounded-xl bg-button-bg-2 text-xs font-medium px-3 py-1 text-primary dark:text-primary-dark"
     >
       <option value="binary">Binary</option>
       <option value="hex">Hex</option>

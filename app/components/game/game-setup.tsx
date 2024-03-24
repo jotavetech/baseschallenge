@@ -7,7 +7,7 @@ import SelectSystem from "./select-system";
 
 import { SystemNumbersType } from "@/types";
 
-import numberThreeMap from "../utils/numberThreeMap";
+import numberThreeMap from "../../utils/numberThreeMap";
 
 const Game = () => {
   const [systemFrom, setSystemFrom] = useState<SystemNumbersType>("binary");
