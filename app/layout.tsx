@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
+
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 const font = Roboto_Mono({ subsets: ["latin"] });
 
@@ -21,6 +23,7 @@ export default function RootLayout({
         <main className="bg-app-bg dark:bg-app-bg-dark ">
           <Header />
           {children}
+          <Footer />
         </main>
       </body>
     </html>
