@@ -2,7 +2,7 @@ import { SystemNumbersType } from "@/types";
 
 interface InputProps {
   disabled?: boolean;
-  placeholder: string;
+  placeholder?: string;
   value?: string;
   onChange?: (value: string) => void;
   type?: SystemNumbersType;
