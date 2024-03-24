@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 
-import Input from "./input";
 import SelectSystem from "./select-system";
+import Game from "./game";
 
 import { SystemNumbersType } from "@/types";
 
 import numberThreeMap from "../../utils/numberThreeMap";
 
-const Game = () => {
+const GameSetup = () => {
   const [systemFrom, setSystemFrom] = useState<SystemNumbersType>("binary");
   const [systemTo, setSystemTo] = useState<SystemNumbersType>("decimal");
 
@@ -41,13 +41,9 @@ const Game = () => {
         </span>{" "}
         to a decimal number
       </p>
-      <div className="flex flex-col items-center mt-5 lg:flex-row gap-5">
-        <Input placeholder="001" id="to-convert" type={"binary"} />
-
-        <Input id="to-convert" type={systemTo} submitabble={true} />
-      </div>
+      <Game from={systemFrom} to={systemTo} />
     </div>
   );
 };
 
-export default Game;
+export default GameSetup;

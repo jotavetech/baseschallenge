@@ -1,4 +1,5 @@
 import { SystemNumbersType } from "@/types";
+import { Send } from "lucide-react";
 
 interface InputProps {
   disabled?: boolean;
@@ -36,16 +37,18 @@ const Input = ({
       <div className="flex items-center">
         <input
           id={id}
-          type="text"
-          className="bg-input-bg dark:bg-input-bg-dark h-12 w-72 outline-none border-primary dark:border-primary-dark border-2 text-primary dark:text-primary-dark placeholder:text-primary placeholder:dark:text-primary-dark p-4  rounded-tl-2xl"
+          type="number"
+          className={`bg-input-bg dark:bg-input-bg-dark h-12 w-72 outline-none border-primary dark:border-primary-dark border-2 text-primary dark:text-primary-dark placeholder:text-primary placeholder:dark:text-primary-dark p-4 rounded-tl-2xl ${
+            !disabled && "hover:opacity-85"
+          }`}
           placeholder={placeholder}
           disabled={disabled}
         />
         <button
           disabled={!submitabble}
-          className="h-12 w-12 bg-button-bg-1 dark:bg-button-bg-1-dark text-primary dark:text-primary-dark font-medium rounded-br-2xl"
+          className="h-12 w-12 bg-button-bg-1 dark:bg-button-bg-1-dark text-primary dark:text-primary-dark font-medium rounded-br-2xl flex items-center justify-center"
         >
-          {type && !submitabble ? buttonMap[type] : "S"}
+          {type && !submitabble ? buttonMap[type] : <Send />}
         </button>
       </div>
     </div>
