@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
+
 import { ThemeProvider } from "./components/providers/theme-provider";
 
 const font = Roboto_Mono({ subsets: ["latin"] });
@@ -19,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
+    <html lang="en" suppressHydrationWarning>
       <body className={font.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="bg-app-bg dark:bg-app-bg-dark">

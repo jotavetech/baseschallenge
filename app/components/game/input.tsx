@@ -1,5 +1,10 @@
+"use client";
+
 import { SystemNumbersType } from "@/types";
+
 import { Send } from "lucide-react";
+
+import { useEffect, useRef } from "react";
 
 interface InputProps {
   disabled?: boolean;
@@ -26,6 +31,12 @@ const Input = ({
     decimal: "09",
   };
 
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
+
   return (
     <div className="flex flex-col">
       <label
@@ -44,6 +55,7 @@ const Input = ({
           placeholder={placeholder}
           disabled={disabled}
           onChange={onChange}
+          ref={inputRef}
         />
         <button
           disabled={!submitabble}
