@@ -1,3 +1,5 @@
+import ModeToggle from "./mode-toggle";
+
 const Footer = () => {
   return (
     <footer className="w-full h-20 lg:h-36 fixed bottom-0 left-0 flex items-center justify-between px-7 md:px-12 lg:px-52 xl:px-72">
@@ -8,6 +10,7 @@ const Footer = () => {
       >
         github
       </a>
+      <ModeToggle />
       <a
         href="https://beacons.ai/jotavetech"
         target="_blank"
