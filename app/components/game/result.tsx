@@ -16,6 +16,7 @@ const Result = ({ playAgain, rounds, score }: ResultProps) => {
       `I scored ${score} out of ${rounds} in the baseschallange game! 😁\n\nPlay now at https://baseschallenge.vercel.app/ 🚀
       `
     );
+    alert("copied to clipboard!");
   };
 
   useEffect(() => {
