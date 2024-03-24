@@ -5,7 +5,7 @@ interface InputProps {
   disabled?: boolean;
   placeholder?: string;
   value?: string;
-  onChange?: (value: string) => void;
+  onChange?: ({ target }: { target: { value: string } }) => void;
   type?: SystemNumbersType;
   submitabble?: boolean;
   id: string;
@@ -37,15 +37,17 @@ const Input = ({
       <div className="flex items-center">
         <input
           id={id}
-          type="number"
           className={`bg-input-bg dark:bg-input-bg-dark h-12 w-72 outline-none border-primary dark:border-primary-dark border-2 text-primary dark:text-primary-dark placeholder:text-primary placeholder:dark:text-primary-dark p-4 rounded-tl-2xl ${
             !disabled && "hover:opacity-85"
           }`}
+          value={value}
           placeholder={placeholder}
           disabled={disabled}
+          onChange={onChange}
         />
         <button
           disabled={!submitabble}
+          type={submitabble ? "submit" : "button"}
           className="h-12 w-12 bg-button-bg-1 dark:bg-button-bg-1-dark text-primary dark:text-primary-dark font-medium rounded-br-2xl flex items-center justify-center"
         >
           {type && !submitabble ? buttonMap[type] : <Send />}

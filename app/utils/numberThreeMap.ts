@@ -1,5 +1,5 @@
 const numberThreeMap = {
-  binary: "101",
+  binary: "011",
   hex: "3",
   decimal: "3",
 };
