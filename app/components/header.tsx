@@ -17,17 +17,17 @@ const Header = () => {
       <div className="space-x-2">
         <Link href="/faq" aria-label="go to faq" className="inline lg:hidden">
           <button className="bg-button-bg-1 dark:bg-button-bg-1-dark text-primary dark:text-primary-dark font-medium px-2 rounded-xl hover:-translate-y-1">
-            FAQ
+            faq
           </button>
         </Link>
         <Link href="/faq" aria-label="go to faq" className="hidden lg:inline">
           <button className="bg-button-bg-1 dark:bg-button-bg-1-dark text-primary dark:text-primary-dark font-medium px-4 py-3 rounded-md hover:-translate-y-1">
-            Frequently Asked Questions
+            frequently asked questions
           </button>
         </Link>
         <Link href="/help" aria-label="go to help">
           <button className="bg-button-bg-2 text-primary dark:text-primary-dark font-medium px-2 rounded-xl lg:rounded-md lg:px-4 lg:py-3 hover:-translate-y-1">
-            Help
+            help
           </button>
         </Link>
       </div>

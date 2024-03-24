@@ -4,14 +4,14 @@ const Footer = () => {
       <a
         href="https://github.com/jotavetech/bases-challange"
         target="_blank"
-        className="text-primary dark:text-primary-dark underline italic"
+        className="text-primary dark:text-primary-dark underline italic font-medium"
       >
         github
       </a>
       <a
         href="https://beacons.ai/jotavetech"
         target="_blank"
-        className="text-primary dark:text-primary-dark underline italic"
+        className="text-primary dark:text-primary-dark underline italic font-medium"
       >
         @jotavetech
       </a>
