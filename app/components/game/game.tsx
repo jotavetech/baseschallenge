@@ -6,7 +6,11 @@ import Input from "./input";
 
 import { ArrowRight } from "lucide-react";
 
-import { compareNumbers, generateNumber } from "@/app/utils/generateNumbers";
+import {
+  compareNumbers,
+  generateNumber,
+  getConversion,
+} from "@/app/utils/generateNumbers";
 import Result from "./result";
 
 interface GameProps {
@@ -20,12 +24,16 @@ const Game = ({ from, to }: GameProps) => {
   const [score, setScore] = useState(0);
   const [rounds, setRounds] = useState(0);
   const [showResult, setShowResult] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
+    setError("");
+    setShowResult(false);
     setGeneratedNumber(generateNumber(from));
+    setInputNumber("");
     setScore(0);
     setRounds(0);
-  }, [from]);
+  }, [from, to]);
 
   useEffect(() => {
     if (rounds === 5) {
@@ -39,11 +47,20 @@ const Game = ({ from, to }: GameProps) => {
 
     if (compareNumbers(generatedNumber, inputNumber, from, to)) {
       setScore((prev) => prev + 1);
-    }
+      setGeneratedNumber(generateNumber(from));
+      setInputNumber("");
+      setRounds((prev) => prev + 1);
+    } else {
+      const correctNumber = getConversion(from, to, generatedNumber);
+      setError(correctNumber);
+      setInputNumber("");
 
-    setGeneratedNumber(generateNumber(from));
-    setInputNumber("");
-    setRounds((prev) => prev + 1);
+      setTimeout(() => {
+        setError("");
+        setGeneratedNumber(generateNumber(from));
+        setRounds((prev) => prev + 1);
+      }, 1000);
+    }
   };
 
   const playAgain = () => {
@@ -71,8 +88,11 @@ const Game = ({ from, to }: GameProps) => {
             <Input
               id="input-number"
               type={to}
-              submitabble
+              disabled={error.length > 0}
+              placeholder={error}
+              submitabble={!error}
               value={inputNumber}
+              error={error}
               onChange={({ target }) => setInputNumber(target.value)}
             />
           </form>

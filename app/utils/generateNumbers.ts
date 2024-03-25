@@ -32,4 +32,14 @@ const compareNumbers = (
   return inputNumberConverted === generatedNumberConverted;
 };
 
-export { generateNumber, compareNumbers };
+const getConversion = (
+  from: SystemNumbersType,
+  to: SystemNumbersType,
+  number: string
+) => {
+  const inputNumber = parseInt(number, getNumberSystem(from));
+
+  return inputNumber.toString(getNumberSystem(to));
+};
+
+export { generateNumber, compareNumbers, getConversion };
