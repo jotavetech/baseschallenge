@@ -39,7 +39,7 @@ const GameSetup = () => {
         <span className="text-secondary dark:text-secondary-dark">
           {systemFrom} numbers
         </span>{" "}
-        to a decimal number
+        to a {systemTo} number
       </p>
       <Game from={systemFrom} to={systemTo} />
     </div>
