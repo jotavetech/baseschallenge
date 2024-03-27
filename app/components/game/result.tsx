@@ -13,10 +13,10 @@ interface ResultProps {
 const Result = ({ playAgain, rounds, score }: ResultProps) => {
   const handleCopy = () => {
     navigator.clipboard.writeText(
-      `I scored ${score} out of ${rounds} in the baseschallange game! 😁\n\nPlay now at https://baseschallenge.vercel.app/ 🚀
-      `
+      `I scored ${score} out of ${rounds} in the baseschallange game! 😁\n\nPlay now at https://bases-challenge.vercel.app/ 🚀`
     );
-    alert("copied to clipboard!");
+
+    alert("result copied to clipboard!");
   };
 
   useEffect(() => {
@@ -25,6 +25,7 @@ const Result = ({ playAgain, rounds, score }: ResultProps) => {
         playAgain();
       }
     };
+
     window.addEventListener("keydown", handleUserKeyPress);
 
     return () => {

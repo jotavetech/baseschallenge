@@ -39,7 +39,7 @@ const Game = ({ from, to }: GameProps) => {
     if (rounds === 5) {
       setShowResult(true);
     }
-  }, [rounds, score, from]);
+  }, [rounds]);
 
   const checkNumber = (e: FormEvent) => {
     e.preventDefault();
