@@ -28,7 +28,7 @@ const Result = ({ playAgain, rounds, score }: ResultProps) => {
     try {
       navigator.share(shareData);
     } catch (error) {
-      alert("share not supported in this browser");
+      console.error("share not supported in this browser");
     }
   };
 
