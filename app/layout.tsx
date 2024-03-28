@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/react";
+
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
 
@@ -64,6 +66,7 @@ export default function RootLayout({
           <main className="bg-app-bg dark:bg-app-bg-dark">
             <Header />
             {children}
+            <Analytics />
             <Footer />
           </main>
         </ThemeProvider>
