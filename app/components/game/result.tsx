@@ -12,11 +12,24 @@ interface ResultProps {
 
 const Result = ({ playAgain, rounds, score }: ResultProps) => {
   const handleCopy = () => {
-    navigator.clipboard.writeText(
-      `I scored ${score} out of ${rounds} in the bases-challange game! 😁\n\nPlay now at https://bases-challange.vercel.app/ 🚀`
-    );
+    const copiedText = `I scored ${score} out of ${rounds} in the bases-challange game! 😁\n\nPlay now at https://bases-challange.vercel.app/ 🚀`;
+    const shareText = `I scored ${score} out of ${rounds} in the bases-challange game! 😁`;
+
+    const shareData = {
+      title: "bases-challange",
+      text: shareText,
+      url: "https://bases-challange.vercel.app/",
+    };
+
+    navigator.clipboard.writeText(copiedText);
 
     alert("result copied to clipboard!");
+
+    try {
+      navigator.share(shareData);
+    } catch (error) {
+      alert("share not supported in this browser");
+    }
   };
 
   useEffect(() => {
@@ -47,7 +60,7 @@ const Result = ({ playAgain, rounds, score }: ResultProps) => {
           onClick={handleCopy}
         >
           <Copy />
-          click copy and share your result
+          click to copy and share your result
         </button>
 
         <button
