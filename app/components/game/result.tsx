@@ -13,7 +13,7 @@ interface ResultProps {
 const Result = ({ playAgain, rounds, score }: ResultProps) => {
   const handleCopy = () => {
     navigator.clipboard.writeText(
-      `I scored ${score} out of ${rounds} in the baseschallange game! 😁\n\nPlay now at https://bases-challenge.vercel.app/ 🚀`
+      `I scored ${score} out of ${rounds} in the bases-challange game! 😁\n\nPlay now at https://bases-challange.vercel.app/ 🚀`
     );
 
     alert("result copied to clipboard!");
