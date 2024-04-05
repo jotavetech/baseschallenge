@@ -36,8 +36,10 @@ const Input = ({
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
+    if (!value && !error) {
+      inputRef.current?.focus();
+    }
+  }, [error, value]);
 
   return (
     <div className="flex flex-col">
@@ -57,7 +59,7 @@ const Input = ({
           placeholder={placeholder}
           disabled={disabled}
           onChange={onChange}
-          autoFocus={!disabled}
+          ref={inputRef}
         />
         <button
           disabled={!submitable}
