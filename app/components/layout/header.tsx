@@ -27,11 +27,11 @@ const Header = () => {
             frequently asked questions
           </button>
         </Link>
-        <Link href="/help" aria-label="go to help">
+        {/* <Link href="/help" aria-label="go to help">
           <button className="bg-button-bg-2 text-primary dark:text-primary-dark font-medium px-2 rounded-xl lg:rounded-md lg:px-4 lg:py-3 hover:-translate-y-1">
             help
           </button>
-        </Link>
+        </Link> */}
       </div>
     </header>
   );
