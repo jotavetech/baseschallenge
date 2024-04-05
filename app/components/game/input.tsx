@@ -12,7 +12,7 @@ interface InputProps {
   value?: string;
   onChange?: ({ target }: { target: { value: string } }) => void;
   type?: SystemNumbersType;
-  submitabble?: boolean;
+  submitable?: boolean;
   id: string;
   error?: string;
 }
@@ -21,7 +21,7 @@ const Input = ({
   disabled,
   onChange,
   placeholder,
-  submitabble,
+  submitable,
   type,
   value,
   id,
@@ -57,14 +57,14 @@ const Input = ({
           placeholder={placeholder}
           disabled={disabled}
           onChange={onChange}
-          ref={inputRef}
+          autoFocus={!disabled}
         />
         <button
-          disabled={!submitabble}
-          type={submitabble ? "submit" : "button"}
+          disabled={!submitable}
+          type={submitable ? "submit" : "button"}
           className="h-12 w-12 bg-button-bg-1 dark:bg-button-bg-1-dark text-primary dark:text-primary-dark font-medium rounded-br-2xl flex items-center justify-center"
         >
-          {type && !submitabble && !error ? buttonMap[type] : <Send />}
+          {type && !submitable && !error ? buttonMap[type] : <Send />}
         </button>
       </div>
     </div>

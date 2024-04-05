@@ -1,6 +1,6 @@
 import { SystemNumbersType } from "@/types";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
 import Input from "./input";
 
@@ -90,7 +90,7 @@ const Game = ({ from, to }: GameProps) => {
               type={to}
               disabled={error.length > 0}
               placeholder={error}
-              submitabble={!error}
+              submitable={!error}
               value={inputNumber}
               error={error}
               onChange={({ target }) => setInputNumber(target.value)}
