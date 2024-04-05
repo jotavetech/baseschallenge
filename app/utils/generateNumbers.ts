@@ -3,14 +3,7 @@ import { SystemNumbersType } from "@/types";
 const generateNumber = (type: SystemNumbersType) => {
   const randomNumber = Math.floor(Math.random() * 30) + 1;
 
-  switch (type) {
-    case "binary":
-      return randomNumber.toString(2);
-    case "hex":
-      return randomNumber.toString(16);
-    case "decimal":
-      return randomNumber.toString(10);
-  }
+  return randomNumber.toString(getNumberSystem(type));
 };
 
 const getNumberSystem = (type: SystemNumbersType) => {

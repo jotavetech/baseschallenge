@@ -47,9 +47,9 @@ const Game = ({ from, to }: GameProps) => {
 
     if (compareNumbers(generatedNumber, inputNumber, from, to)) {
       setScore((prev) => prev + 1);
+      setRounds((prev) => prev + 1);
       setGeneratedNumber(generateNumber(from));
       setInputNumber("");
-      setRounds((prev) => prev + 1);
     } else {
       const correctNumber = getConversion(from, to, generatedNumber);
       setError(correctNumber);
