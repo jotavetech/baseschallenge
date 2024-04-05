@@ -12,13 +12,13 @@ interface ResultProps {
 
 const Result = ({ playAgain, rounds, score }: ResultProps) => {
   const handleCopy = () => {
-    const copiedText = `I scored ${score} out of ${rounds} in the bases-challange game! 😁\n\nPlay now at https://bases-challange.vercel.app/ 🚀`;
+    const copiedText = `I scored ${score} out of ${rounds} in the bases-challange game! 😁\n\nPlay now at https://baseschallange.vercel.app/ 🚀`;
     const shareText = `I scored ${score} out of ${rounds} in the bases-challange game! 😁`;
 
     const shareData = {
-      title: "bases-challange",
+      title: "baseschallange",
       text: shareText,
-      url: "https://bases-challange.vercel.app/",
+      url: "https://baseschallange.vercel.app/",
     };
 
     navigator.clipboard.writeText(copiedText);
