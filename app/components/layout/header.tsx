@@ -4,7 +4,7 @@ import ModeToggle from "./mode-toggle";
 
 const Header = () => {
   return (
-    <header className="w-full h-20 lg:h-36 fixed top-0 left-0 flex items-center justify-between px-7 md:px-12 lg:px-52 xl:px-72 z-30">
+    <header className="w-full h-20 lg:h-36 fixed top-0 left-0 flex items-center justify-between px-7 md:px-12 lg:px-52 xl:px-72 z-30 bg-app-bg dark:bg-app-bg-dark">
       <Link href="/" aria-label="go to bases challange">
         <Image
           className="dark:invert lg:w-64"
