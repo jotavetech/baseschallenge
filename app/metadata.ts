@@ -14,7 +14,7 @@ const metadata: Metadata = {
       {
         width: 1920,
         height: 1080,
-        url: "https://github.com/jotavetech/baseschallenge/raw/main/public/assets/banner.png",
+        url: "https://raw.githubusercontent.com/jotavetech/baseschallenge/main/public/assets/banner.png",
         alt: "baseschallenge website cover",
       },
     ],
@@ -31,7 +31,7 @@ const metadata: Metadata = {
       {
         width: 1920,
         height: 1080,
-        url: "https://github.com/jotavetech/baseschallenge/raw/main/public/assets/banner.png",
+        url: "https://raw.githubusercontent.com/jotavetech/baseschallenge/main/public/assets/banner.png",
         alt: "baseschallenge website cover",
       },
     ],
