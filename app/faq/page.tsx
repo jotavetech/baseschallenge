@@ -8,7 +8,7 @@ const FaqPage = () => {
       </h1>
       <ul className="px-10 mt-10 max-w-[600px] space-y-10">
         <Question
-          title="- How does the baseschallange game work?"
+          title="- How does the baseschallenge game work?"
           description="The game randomly generates five numbers in a specific format: hexadecimal, binary, or decimal. Your task is to convert these numbers to the other selected format."
         />
         <Question

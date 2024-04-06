@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 const metadata: Metadata = {
-  title: "Bases Challange",
+  title: "bases challenge",
   description: "A numeric base conversion challenge.",
   icons: {
     apple: "/favicon.ico",
@@ -14,16 +14,16 @@ const metadata: Metadata = {
       {
         width: 1920,
         height: 1080,
-        url: "https://github.com/jotavetech/baseschallange/raw/main/public/assets/banner.png",
-        alt: "baseschallange website cover",
+        url: "https://github.com/jotavetech/baseschallenge/raw/main/public/assets/banner.png",
+        alt: "baseschallenge website cover",
       },
     ],
     locale: "en",
-    title: "Bases Challange",
-    siteName: "Bases Challange",
+    title: "Bases Challenge",
+    siteName: "Bases Challenge",
     description: "Train your skills in numeric systems in a fun way.",
     type: "website",
-    url: "https://baseschallange.vercel.app",
+    url: "https://baseschallenge.vercel.app",
   },
   publisher: "Jotavetech",
   twitter: {
@@ -31,12 +31,12 @@ const metadata: Metadata = {
       {
         width: 1920,
         height: 1080,
-        url: "https://github.com/jotavetech/baseschallange/raw/main/public/assets/banner.png",
-        alt: "baseschallange website cover",
+        url: "https://github.com/jotavetech/baseschallenge/raw/main/public/assets/banner.png",
+        alt: "baseschallenge website cover",
       },
     ],
     card: "summary_large_image",
-    title: "baseschallange",
+    title: "baseschallenge",
     description: "Train your skills in numeric systems in a fun way.",
     site: "@jotavetech",
     creator: "João Vitor Gugel (jotavetech)",
