@@ -1,10 +1,11 @@
+import { MessageCircleQuestion } from "lucide-react";
 import Question from "../components/faq/question";
 
 const FaqPage = () => {
   return (
     <div className="py-20 lg:py-36 min-h-screen flex items-center flex-col">
-      <h1 className="text-primary dark:text-primary-dark mt-5 md:mt-10 font-semibold">
-        frequently asked questions
+      <h1 className="text-primary dark:text-primary-dark mt-5 md:mt-10 font-semibold flex items-center gap-2">
+        frequently asked questions <MessageCircleQuestion />
       </h1>
       <ul className="px-10 mt-10 max-w-[600px] space-y-10">
         <Question

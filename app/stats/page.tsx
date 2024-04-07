@@ -2,7 +2,7 @@
 
 import { statsType } from "@/types";
 
-import { Gamepad, RotateCcw, Trophy } from "lucide-react";
+import { Gamepad, PieChart, RotateCcw, Trophy } from "lucide-react";
 
 import { useEffect, useState } from "react";
 
@@ -34,11 +34,11 @@ const StatsPage = () => {
   };
 
   return (
-    <div className="py-20 lg:py-36 min-h-screen flex items-center md:justify-start justify-center flex-col">
-      <h1 className="text-primary dark:text-primary-dark md:mt-28 font-semibold text-3xl">
-        statistics
+    <div className="py-20 lg:py-36 min-h-screen flex items-center justify-center flex-col">
+      <h1 className="text-primary dark:text-primary-dark mt-5 md:mt-10 font-semibold flex items-center gap-2">
+        statistics <PieChart />
       </h1>
-      <div className="mt-5 text-center flex flex-col items-center gap-5">
+      <div className="mt-5 text-center flex flex-col items-center justify-center gap-5">
         <p className="text-primary dark:text-primary-dark text-sm md:text-xl flex items-center gap-2">
           times you have generated a new number <Gamepad />
         </p>
