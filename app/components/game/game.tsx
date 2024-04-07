@@ -46,14 +46,14 @@ const Game = ({ from, to }: GameProps) => {
         let statsJson = JSON.parse(statsStorage) as statsType;
 
         statsJson.timesPlayed = statsJson.timesPlayed + 5;
-        statsJson.timesWinned = statsJson.timesWinned + score;
+        statsJson.timesWon = statsJson.timesWon + score;
 
         localStorage.setItem("stats", JSON.stringify(statsJson));
       } else {
         const stats = {
           timesPlayed: 5,
-          timesWinned: score,
-        };
+          timesWon: score,
+        } as statsType;
         localStorage.setItem("stats", JSON.stringify(stats));
       }
     }

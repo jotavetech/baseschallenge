@@ -4,18 +4,22 @@ import { statsType } from "@/types";
 
 import { Gamepad, Trophy } from "lucide-react";
 
+import { useEffect, useState } from "react";
+
 const StatsPage = () => {
-  const stats = localStorage.getItem("stats");
+  const [timesPlayed, setTimesPlayed] = useState(0);
+  const [timesWon, setTimesWon] = useState(0);
 
-  let timesPlayed = 0;
-  let timesWinned = 0;
+  useEffect(() => {
+    const stats = localStorage.getItem("stats");
 
-  if (stats) {
-    const statsJson = JSON.parse(stats) as statsType;
+    if (stats) {
+      const statsJson = JSON.parse(stats) as statsType;
 
-    timesPlayed = statsJson.timesPlayed;
-    timesWinned = statsJson.timesWinned;
-  }
+      setTimesPlayed(statsJson.timesPlayed);
+      setTimesWon(statsJson.timesWon);
+    }
+  }, []);
 
   return (
     <div className="py-20 lg:py-36 min-h-screen flex items-center md:justify-start justify-center flex-col">
@@ -33,7 +37,7 @@ const StatsPage = () => {
           times you have guessed the number <Trophy />
         </p>
         <span className="text-secondary dark:text-secondary-dark text-lg md:text-xl">
-          {timesWinned}x
+          {timesWon}x
         </span>
       </div>
     </div>
