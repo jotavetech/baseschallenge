@@ -1,8 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import ModeToggle from "./mode-toggle";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
+  const router = useRouter();
+
+  const handleStatsNav = () => {
+    const accept = confirm("If you're playing, your progress will be lost.");
+
+    if (accept) {
+      router.push("/stats");
+    }
+  };
+
   return (
     <header className="w-full h-20 lg:h-36 fixed top-0 left-0 flex items-center justify-between px-7 md:px-12 lg:px-52 xl:px-72 z-30 bg-app-bg dark:bg-app-bg-dark">
       <Link href="/" aria-label="go to bases challange">
@@ -27,11 +40,13 @@ const Header = () => {
             frequently asked questions
           </button>
         </Link>
-        {/* <Link href="/help" aria-label="go to help">
-          <button className="bg-button-bg-2 text-primary dark:text-primary-dark font-medium px-2 rounded-xl lg:rounded-md lg:px-4 lg:py-3 hover:-translate-y-1">
-            help
-          </button>
-        </Link> */}
+
+        <button
+          className="bg-button-bg-2 text-primary dark:text-primary-dark font-medium px-2 rounded-xl lg:rounded-md lg:px-4 lg:py-3 hover:-translate-y-1"
+          onClick={handleStatsNav}
+        >
+          stats
+        </button>
       </div>
     </header>
   );

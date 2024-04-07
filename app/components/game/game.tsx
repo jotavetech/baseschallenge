@@ -1,4 +1,4 @@
-import { SystemNumbersType } from "@/types";
+import { SystemNumbersType, statsType } from "@/types";
 
 import { FormEvent, useEffect, useState } from "react";
 
@@ -11,6 +11,7 @@ import {
   generateNumber,
   getConversion,
 } from "@/app/utils/generateNumbers";
+
 import Result from "./result";
 
 interface GameProps {
@@ -38,6 +39,23 @@ const Game = ({ from, to }: GameProps) => {
   useEffect(() => {
     if (rounds === 5) {
       setShowResult(true);
+
+      const statsStorage = localStorage.getItem("stats");
+
+      if (statsStorage) {
+        let statsJson = JSON.parse(statsStorage) as statsType;
+
+        statsJson.timesPlayed = statsJson.timesPlayed + 5;
+        statsJson.timesWinned = statsJson.timesWinned + score;
+
+        localStorage.setItem("stats", JSON.stringify(statsJson));
+      } else {
+        const stats = {
+          timesPlayed: 5,
+          timesWinned: score,
+        };
+        localStorage.setItem("stats", JSON.stringify(stats));
+      }
     }
   }, [rounds]);
 
