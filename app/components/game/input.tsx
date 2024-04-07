@@ -60,6 +60,7 @@ const Input = ({
           disabled={disabled}
           onChange={onChange}
           ref={inputRef}
+          autoComplete="off"
         />
         <button
           disabled={!submitable}
