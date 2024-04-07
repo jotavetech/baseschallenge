@@ -57,7 +57,7 @@ const Game = ({ from, to }: GameProps) => {
         localStorage.setItem("stats", JSON.stringify(stats));
       }
     }
-  }, [rounds]);
+  }, [rounds, score]);
 
   const checkNumber = (e: FormEvent) => {
     e.preventDefault();
