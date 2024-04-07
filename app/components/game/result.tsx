@@ -1,8 +1,4 @@
-"use client";
-
 import { Copy } from "lucide-react";
-
-import { useEffect } from "react";
 
 interface ResultProps {
   score: number;
@@ -32,19 +28,13 @@ const Result = ({ playAgain, rounds, score }: ResultProps) => {
     }
   };
 
-  useEffect(() => {
-    const handleUserKeyPress = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        playAgain();
-      }
-    };
+  const handleUserKeyPress = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      playAgain();
+    }
+  };
 
-    window.addEventListener("keydown", handleUserKeyPress);
-
-    return () => {
-      window.removeEventListener("keydown", handleUserKeyPress);
-    };
-  }, []);
+  window.addEventListener("keydown", handleUserKeyPress);
 
   return (
     <div className="bg-app-bg dark:bg-app-bg-dark absolute top-0 left-0 h-full w-full flex items-center justify-center">
