@@ -1,9 +1,21 @@
 import { SystemNumbersType } from "@/types";
 
-const generateNumber = (type: SystemNumbersType) => {
-  const randomNumber = Math.floor(Math.random() * 30) + 1;
+let generatedNumbers: string[] = [];
 
-  return randomNumber.toString(getNumberSystem(type));
+const generateNumber = (type: SystemNumbersType, newArray?: boolean) => {
+  let randomNumber: string;
+
+  if (newArray) generatedNumbers = [];
+
+  do {
+    randomNumber = (Math.floor(Math.random() * 30) + 1).toString(
+      getNumberSystem(type)
+    );
+  } while (generatedNumbers.includes(randomNumber));
+
+  generatedNumbers.push(randomNumber);
+
+  return randomNumber;
 };
 
 const getNumberSystem = (type: SystemNumbersType) => {

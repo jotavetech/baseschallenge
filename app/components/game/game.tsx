@@ -1,6 +1,6 @@
 import { SystemNumbersType } from "@/types";
 
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 import Input from "./input";
 
@@ -29,7 +29,7 @@ const Game = ({ from, to }: GameProps) => {
   useEffect(() => {
     setError("");
     setShowResult(false);
-    setGeneratedNumber(generateNumber(from));
+    setGeneratedNumber(generateNumber(from, true));
     setInputNumber("");
     setScore(0);
     setRounds(0);
@@ -64,7 +64,7 @@ const Game = ({ from, to }: GameProps) => {
   };
 
   const playAgain = () => {
-    setGeneratedNumber(generateNumber(from));
+    setGeneratedNumber(generateNumber(from, true));
     setScore(0);
     setRounds(0);
     setShowResult(false);
