@@ -2,7 +2,7 @@
 
 import { statsType } from "@/types";
 
-import { Gamepad, Trophy } from "lucide-react";
+import { Gamepad, RotateCcw, Trophy } from "lucide-react";
 
 import { useEffect, useState } from "react";
 
@@ -20,6 +20,18 @@ const StatsPage = () => {
       setTimesWon(statsJson.timesWon);
     }
   }, []);
+
+  const deleteStats = () => {
+    const accept = confirm(
+      "Are you sure? Doing this will reset all your statistics"
+    );
+
+    if (accept) {
+      localStorage.removeItem("stats");
+      setTimesPlayed(0);
+      setTimesWon(0);
+    }
+  };
 
   return (
     <div className="py-20 lg:py-36 min-h-screen flex items-center md:justify-start justify-center flex-col">
@@ -39,6 +51,13 @@ const StatsPage = () => {
         <span className="text-secondary dark:text-secondary-dark text-lg md:text-xl">
           {timesWon}x
         </span>
+        <button
+          className="bg-button-bg-2 dark:bg-button-bg-2-dark text-primary dark:text-primary-dark font-medium px-4 py-3 rounded-md hover:-translate-y-1 flex items-center gap-2"
+          onClick={deleteStats}
+        >
+          reset
+          <RotateCcw />
+        </button>
       </div>
     </div>
   );
