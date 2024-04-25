@@ -1,7 +1,7 @@
 {
   "theme_color": "#f69435",
   "background_color": "#afa59b",
-  "display": "browser",
+  "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "description": "Train your skills in numeric systems in a fun way.",
