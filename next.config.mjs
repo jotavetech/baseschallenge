@@ -6,6 +6,7 @@ const nextConfig = {
   ...withPWA({
     dest: "public",
     register: true,
+    skipWaiting: true,
   }),
 };
 
