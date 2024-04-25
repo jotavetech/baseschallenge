@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 const metadata: Metadata = {
   title: "bases challenge",
+  manifest: "/manifest.json",
   description: "A numeric base conversion challenge.",
   icons: {
     apple: "/favicon.ico",
