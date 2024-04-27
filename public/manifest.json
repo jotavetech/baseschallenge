@@ -2,6 +2,8 @@
   "display": "fullscreen",
   "scope": "/",
   "start_url": "/",
+  "theme_color": "#F9FADC",
+  "background_color": "#F9FADC",
   "description": "Train your skills in numeric systems in a fun way.",
   "short_name": "baseschallange",
   "name": "baseschallange",
