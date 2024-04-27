@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 const metadata: Metadata = {
-  title: "bases challenge",
+  title: "baseschallenge",
   manifest: "/manifest.json",
   description: "A numeric base conversion challenge.",
   icons: {
@@ -20,8 +20,8 @@ const metadata: Metadata = {
       },
     ],
     locale: "en",
-    title: "Bases Challenge",
-    siteName: "Bases Challenge",
+    title: "baseschallenge",
+    siteName: "baseschallenge",
     description: "Train your skills in numeric systems in a fun way.",
     type: "website",
     url: "https://baseschallenge.vercel.app",
