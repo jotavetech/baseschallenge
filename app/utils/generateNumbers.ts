@@ -2,13 +2,17 @@ import { SystemNumbersType } from "@/types";
 
 let generatedNumbers: string[] = [];
 
-const generateNumber = (type: SystemNumbersType, newArray?: boolean) => {
+const generateNumber = (
+  type: SystemNumbersType,
+  newArray?: boolean,
+  range = 30
+) => {
   let randomNumber: string;
 
   if (newArray) generatedNumbers = [];
 
   do {
-    randomNumber = (Math.floor(Math.random() * 30) + 1).toString(
+    randomNumber = (Math.floor(Math.random() * range) + 1).toString(
       getNumberSystem(type)
     );
   } while (generatedNumbers.includes(randomNumber));
