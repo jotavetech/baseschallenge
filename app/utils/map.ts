@@ -5,7 +5,7 @@ const numberThreeMap = {
 };
 
 const difficultyMap = {
-  easy: 15,
+  easy: 10,
   medium: 30,
   hard: 50,
   extreme: 100,
