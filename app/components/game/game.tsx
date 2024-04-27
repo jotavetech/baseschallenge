@@ -27,14 +27,18 @@ const Game = ({ from, to }: GameProps) => {
   const [showResult, setShowResult] = useState(false);
   const [error, setError] = useState("");
 
-  useEffect(() => {
+  const resetGame = (from: SystemNumbersType) => {
     setError("");
     setShowResult(false);
     setGeneratedNumber(generateNumber(from, true));
     setInputNumber("");
     setScore(0);
     setRounds(0);
-  }, [from, to]);
+  };
+
+  useEffect(() => {
+    resetGame(from);
+  }, [from]);
 
   useEffect(() => {
     if (rounds === 5) {
@@ -81,13 +85,6 @@ const Game = ({ from, to }: GameProps) => {
     }
   };
 
-  const playAgain = () => {
-    setGeneratedNumber(generateNumber(from, true));
-    setScore(0);
-    setRounds(0);
-    setShowResult(false);
-  };
-
   return (
     <div>
       {!showResult ? (
@@ -122,7 +119,11 @@ const Game = ({ from, to }: GameProps) => {
           </p>
         </>
       ) : (
-        <Result score={score} rounds={rounds} playAgain={playAgain} />
+        <Result
+          score={score}
+          rounds={rounds}
+          playAgain={() => resetGame(from)}
+        />
       )}
     </div>
   );
