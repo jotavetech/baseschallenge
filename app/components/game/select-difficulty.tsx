@@ -14,6 +14,7 @@ const SelectDifficulty = ({ value, onChange }: SelectDifficultyProps) => {
       <option value="medium">medium (1 - 30)</option>
       <option value="hard">hard (1 - 50)</option>
       <option value="extreme">extreme (1 - 100)</option>
+      <option value="plus">i am a god (1 - 1000)</option>
     </select>
   );
 };

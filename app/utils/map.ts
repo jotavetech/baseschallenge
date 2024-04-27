@@ -9,6 +9,7 @@ const difficultyMap = {
   medium: 30,
   hard: 50,
   extreme: 100,
+  plus: 1000,
 };
 
 export { numberThreeMap, difficultyMap };
