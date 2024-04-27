@@ -10,9 +10,9 @@ const SelectSystem = ({ value, onChange }: SelectSystemProps) => {
       value={value}
       className="rounded-xl bg-button-bg-2 text-xs font-medium px-3 py-1 text-primary dark:text-primary-dark cursor-pointer"
     >
-      <option value="binary">Binary</option>
-      <option value="hex">Hex</option>
-      <option value="decimal">Decimal</option>
+      <option value="binary">binary</option>
+      <option value="hex">hex</option>
+      <option value="decimal">decimal</option>
     </select>
   );
 };
