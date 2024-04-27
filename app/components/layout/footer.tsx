@@ -4,7 +4,7 @@ const Footer = () => {
       <a
         href="https://github.com/jotavetech/bases-challange"
         target="_blank"
-        className="text-primary dark:text-primary-dark underline italic font-medium"
+        className="text-primary dark:text-primary-dark italic font-medium"
       >
         github
       </a>
@@ -12,7 +12,7 @@ const Footer = () => {
       <a
         href="https://beacons.ai/jotavetech"
         target="_blank"
-        className="text-primary dark:text-primary-dark underline italic font-medium"
+        className="text-primary dark:text-primary-dark italic font-medium"
       >
         @jotavetech
       </a>
