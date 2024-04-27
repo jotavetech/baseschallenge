@@ -33,6 +33,10 @@ const FaqPage = () => {
           description="your score will be displayed at the bottom of the game screen. you will earn a point for each correct answer."
         />
         <Question
+          title="- pwa support?"
+          description="yes, the game is a progressive web app (PWA) and can be installed on your device for offline use."
+        />
+        <Question
           title="- what is the game inspired by?"
           description="the game is inspired by the css2wind.com game. a fun way to practice CSS and Tailwind CSS skills. made by @LukeberryPi."
         />
