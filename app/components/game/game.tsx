@@ -1,8 +1,9 @@
-import { SystemNumbersType, statsType } from "@/types";
+import { DifficultyType, SystemNumbersType, statsType } from "@/types";
 
 import { FormEvent, useEffect, useState } from "react";
 
 import Input from "./input";
+import Result from "./result";
 
 import { ArrowRight } from "lucide-react";
 
@@ -12,14 +13,15 @@ import {
   getConversion,
 } from "@/app/utils/generateNumbers";
 
-import Result from "./result";
+import { difficultyMap } from "@/app/utils/map";
 
 interface GameProps {
   from: SystemNumbersType;
   to: SystemNumbersType;
+  difficulty: DifficultyType;
 }
 
-const Game = ({ from, to }: GameProps) => {
+const Game = ({ from, to, difficulty }: GameProps) => {
   const [generatedNumber, setGeneratedNumber] = useState("");
   const [inputNumber, setInputNumber] = useState("");
   const [score, setScore] = useState(0);
@@ -27,18 +29,18 @@ const Game = ({ from, to }: GameProps) => {
   const [showResult, setShowResult] = useState(false);
   const [error, setError] = useState("");
 
-  const resetGame = (from: SystemNumbersType) => {
+  const resetGame = (from: SystemNumbersType, difficulty: DifficultyType) => {
     setError("");
     setShowResult(false);
-    setGeneratedNumber(generateNumber(from, true));
+    setGeneratedNumber(generateNumber(from, true, difficultyMap[difficulty]));
     setInputNumber("");
     setScore(0);
     setRounds(0);
   };
 
   useEffect(() => {
-    resetGame(from);
-  }, [from]);
+    resetGame(from, difficulty);
+  }, [from, difficulty]);
 
   useEffect(() => {
     if (rounds === 5) {
@@ -122,7 +124,7 @@ const Game = ({ from, to }: GameProps) => {
         <Result
           score={score}
           rounds={rounds}
-          playAgain={() => resetGame(from)}
+          playAgain={() => resetGame(from, difficulty)}
         />
       )}
     </div>
