@@ -5,7 +5,7 @@ let generatedNumbers: string[] = [];
 const generateNumber = (
   type: SystemNumbersType,
   newArray?: boolean,
-  range = 30
+  range = 10
 ) => {
   let randomNumber: string;
 
