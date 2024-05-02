@@ -40,6 +40,21 @@
         "rounds": "rounds"
     },
 
+    "result": {
+        "congratulations": "Congratulations!",
+        "goodtry": "Good try!",
+        "copied_to_clipboard": "Copied to clipboard!",
+        "click_to_copy": "click to copy and share your result",
+        "play_again": "Play again",
+        "result": "Your result is",
+      
+        "share": {
+            "copied": "I scored {score} out of {rounds} in the baseschallenge game! 😁\n\nPlay now at https://baseschallenge.vercel.app/ 🚀",
+            "shared": "I scored {score} out of {rounds} in the baseschallenge game! 😁",
+            "not_supported": "Share not supported in this browser!"
+        }
+    },
+
 
     "faq": {
         "title": "Frequently Asked Questions",

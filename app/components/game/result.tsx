@@ -1,4 +1,5 @@
 import { Copy } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface ResultProps {
   score: number;
@@ -7,9 +8,13 @@ interface ResultProps {
 }
 
 const Result = ({ playAgain, rounds, score }: ResultProps) => {
+
+  const translate = useTranslations("result");
+
   const handleCopy = () => {
-    const copiedText = `I scored ${score} out of ${rounds} in the baseschallenge game! 😁\n\nPlay now at https://baseschallenge.vercel.app/ 🚀`;
-    const shareText = `I scored ${score} out of ${rounds} in the baseschallenge game! 😁`;
+
+    const copiedText = translate("share.copied", {score, rounds});
+    const shareText = translate("share.shared", {score, rounds});
 
     const shareData = {
       title: "baseschallange",
@@ -19,12 +24,12 @@ const Result = ({ playAgain, rounds, score }: ResultProps) => {
 
     navigator.clipboard.writeText(copiedText);
 
-    alert("result copied to clipboard!");
+    alert(translate("copied_to_clipboard"));
 
     try {
       navigator.share(shareData);
     } catch (error) {
-      console.error("share not supported in this browser");
+      console.error(translate("share.not_supported"));
     }
   };
 
@@ -40,24 +45,24 @@ const Result = ({ playAgain, rounds, score }: ResultProps) => {
     <div className="bg-app-bg dark:bg-app-bg-dark absolute top-0 left-0 h-full w-full flex items-center justify-center">
       <div className="flex flex-col items-center gap-2">
         <h1 className="text-3xl font-bold text-secondary dark:text-secondary-dark">
-          {score > 3 ? "congratulations!" : "good try!"}
+          {score > 3 ? translate("congratulations") : translate("goodtry")}
         </h1>
         <p className="text-primary dark:text-primary-dark">
-          your result is: {score}/{rounds}
+          {translate("result")}: {score}/{rounds}
         </p>
         <button
           className="flex items-center gap-2 underline text-primary dark:text-primary-dark text-xs"
           onClick={handleCopy}
         >
           <Copy />
-          click to copy and share your result
+          {translate("click_to_copy")}
         </button>
 
         <button
           className="bg-button-bg-1 dark:bg-button-bg-1-dark text-primary dark:text-primary-dark font-medium px-4 py-3 rounded-md hover:-translate-y-1 mt-5"
           onClick={playAgain}
         >
-          play again
+         {translate("play_again")}
         </button>
       </div>
     </div>

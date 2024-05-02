@@ -41,6 +41,23 @@
 
     },
 
+    "result": {
+        "congratulations": "Parabéns!",
+        "goodtry": "Boa tentativa!",
+        "copied_to_clipboard": "Resultado copiado!",
+        "click_to_copy": "Clique para copiar e compartilhar seu resultado",
+        "play_again": "Jogar novamente",
+        "result": "Seu resultado é",
+      
+        "share": {
+            "copied": "Eu marquei {score} de {rounds} pontos no jogo baseschallenge! 😁\n\nJogue agora em https://baseschallenge.vercel.app/ 🚀",
+            "shared": "Eu marquei {score} de {rounds} pontos no jogo baseschallenge! 😁",
+            "not_supported": "Seu navegador não suporta essa funcionalidade!"
+        }
+    },
+
+
+
     "faq": {
         "title": "Perguntas Frequentes",
         "q1": {
