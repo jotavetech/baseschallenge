@@ -10,11 +10,16 @@ import { DifficultyType, SystemNumbersType } from "@/types";
 import { numberThreeMap } from "../../utils/map";
 
 import SelectDifficulty from "./select-difficulty";
+import { useTranslations,  } from "next-intl";
 
 const GameSetup = () => {
+
+  const translate = useTranslations("game");
+  
   const [systemFrom, setSystemFrom] = useState<SystemNumbersType>("binary");
   const [systemTo, setSystemTo] = useState<SystemNumbersType>("decimal");
   const [difficulty, setDifficulty] = useState<DifficultyType>("easy");
+
 
   return (
     <div>
@@ -25,7 +30,7 @@ const GameSetup = () => {
             setSystemFrom(target.value as SystemNumbersType)
           }
         />
-        <span className="text-primary dark:text-primary-dark">to</span>
+        <span className="text-primary dark:text-primary-dark">{translate("to")}</span>
         <SelectSystem
           value={systemTo}
           onChange={({ target }) =>
@@ -33,28 +38,36 @@ const GameSetup = () => {
           }
         />
       </div>
+      
       <p className="text-primary dark:text-primary-dark font-medium text-base lg:text-lg px-10 text-center">
-        convert{" "}
+        
+        {translate("title.convert")}{" "}
+        
         <span className="text-secondary dark:text-secondary-dark">
-          {numberThreeMap[systemFrom]}
-        </span>{" "}
-        random{" "}
+        {numberThreeMap[systemFrom]}{" "}
+        </span>
+
         <span className="text-secondary dark:text-secondary-dark">
-          {systemFrom} numbers
+          {translate("title.from", { from: translate(`${systemFrom}s`) })}
         </span>{" "}
-        to a {systemTo} number
+        {translate("to")} {translate("title.to", { to: translate(`${systemTo}s`) })}
       </p>
+
       <Game from={systemFrom} to={systemTo} difficulty={difficulty} />
+      
       <div className="flex justify-center mt-5 md:mt-10 flex-col items-center">
+      
         <p className="text-primary dark:text-primary-dark font-medium text-xs mb-1">
-          difficulty
+          {translate("difficulty")}
         </p>
+      
         <SelectDifficulty
           value={difficulty}
           onChange={({ target }) =>
             setDifficulty(target.value as DifficultyType)
           }
         />
+      
       </div>
     </div>
   );

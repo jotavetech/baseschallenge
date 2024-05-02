@@ -14,6 +14,7 @@ import {
 } from "@/app/utils/generateNumbers";
 
 import { difficultyMap } from "@/app/utils/map";
+import { useTranslations } from "next-intl";
 
 interface GameProps {
   from: SystemNumbersType;
@@ -22,6 +23,9 @@ interface GameProps {
 }
 
 const Game = ({ from, to, difficulty }: GameProps) => {
+
+  const translate = useTranslations("game");
+
   const [generatedNumber, setGeneratedNumber] = useState("");
   const [inputNumber, setInputNumber] = useState("");
   const [score, setScore] = useState(0);
@@ -114,10 +118,10 @@ const Game = ({ from, to, difficulty }: GameProps) => {
             />
           </form>
           <p className="font-medium text-center text-primary dark:text-primary-dark mt-5 lg:mt-10">
-            your score: {score}/5
+            {translate("score")}: {score}/5
           </p>
           <p className="text-secondary dark:text-secondary-dark text-center font-medium text-xs">
-            rounds: {rounds}/5
+            {translate("rounds")}: {rounds}/5
           </p>
         </>
       ) : (
