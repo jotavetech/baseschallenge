@@ -1,0 +1,88 @@
+{
+    "header": {
+        "faq": "Perguntas Frequentes!",
+        "stats": "Stats",
+        "lost_progress_confirm": "Se você estiver jogando, seu progresso será perdido!"
+    },
+
+    "game": {
+        "to": "para",
+        
+        "title": {
+            "convert": "converta",
+            "numbers": "números",
+            "from": "números {from}",
+            "to": "números {to}"
+        },
+
+        "binary": "binário",
+        "binarys": "binários",
+        "decimal": "decimal",
+        "decimals": "decimais",
+
+        "hex": "hexadecimal",
+        "hexs": "hexadecimais",
+
+        "score": "Sua pontuação",
+        
+        "difficulty": "dificuldade",
+
+        "hard": "Dificil",
+
+        "medium": "Médio",
+
+        "easy": "Fácil",
+
+        "extreme": "Extremo",
+
+        "god": "Eu sou um Deus!",
+
+        "rounds": "rodadas"
+
+    },
+
+    "faq": {
+        "title": "Perguntas Frequentes",
+        "q1": {
+            "title": "Como o jogo baseschallenge funciona?",
+            "description": "O jogo gera aleatoriamente cinco números em um formato específico: hexadecimal, binário ou decimal. Sua tarefa é converter esses números para o outro formato selecionado."
+        },
+        "q2": {
+            "title": "Qual é o propósito do jogo?",
+            "description": "O jogo foi desenvolvido para ajudá-lo a praticar a conversão de números entre diferentes bases. Essa é uma habilidade útil para estudantes e profissionais de ciência da computação."
+        },
+        "q3": {
+            "title": "Como faço para jogar?",
+            "description": "Basta digitar o número no campo de entrada e pressionar Enter ou clicar no botão enviar. Se sua resposta estiver correta, você ganhará um ponto, se não, a resposta correta será exibida."
+        },
+        "q4": {
+            "title": "Como faço para converter um número em outra base?",
+            "description": "Você pode usar a calculadora do computador ou usar um conversor on-line. Como alternativa, você pode usar o jogo para praticar e aprimorar suas habilidades."
+        },
+        "q5": {
+            "title": "Como posso saber a minha pontuação?",
+            "description": "Sua pontuação será exibida na parte inferior da tela do jogo. Você ganhará um ponto para cada resposta correta."
+        },
+        "q6": {
+            "title": "Tem suporte a PWA?",
+            "description": "Sim, o jogo é um \"progressive web app\" (PWA) e pode ser instalado em seu dispositivo para jogar off-line."
+        },
+        "q7": {
+            "title": "Qual é a inspiração para o jogo?",
+            "description": "O jogo é inspirado no css2wind.com. Uma maneira divertida de praticar as habilidades de CSS e Tailwind CSS. Feito por @LukeberryPi"
+        }
+    },
+
+    "stats": {
+        "title": "Estatísticas",
+        "new_number_generated": "Vezes em que você gerou um novo número",
+        "guessed_numbers": "Vezes em que você acertou o número",
+        "reset": "Redefinir",
+
+        "reset_stats_confirm": "Tem certeza que deseja redefinir as estatísticas? Todo seu progresso será perdido!"
+    }
+
+
+
+
+}
