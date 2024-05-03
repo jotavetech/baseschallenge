@@ -3,6 +3,7 @@
 import { SystemNumbersType } from "@/types";
 
 import { Send } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { useEffect, useRef } from "react";
 
@@ -41,13 +42,15 @@ const Input = ({
     }
   }, [error, value]);
 
+  const translate = useTranslations("game");
+
   return (
     <div className="flex flex-col">
       <label
         htmlFor={id}
         className="text-primary dark:text-primary-dark text-xs font-medium mb-1"
       >
-        {type}
+        {translate(type)}
       </label>
       <div className="flex items-center">
         <input
