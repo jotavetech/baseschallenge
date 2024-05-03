@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import {Link} from '../../utils/navigation';
-import {useRouter} from '../../utils/navigation';
+import { Link } from "../../utils/navigation";
+import { useRouter } from "../../utils/navigation";
 import ModeToggle from "./mode-toggle";
 import { useLocale, useTranslations } from "next-intl";
 import { ChangeLocale } from "../locale/change-locale";
@@ -33,9 +33,8 @@ const Header = () => {
         />
       </Link>
       <div className="space-x-2 flex items-center">
-      <ChangeLocale locale={locale} />
         <ModeToggle />
-   
+        <ChangeLocale locale={locale} />
         <Link href="/faq" aria-label="go to faq" className="inline lg:hidden">
           <button className="bg-button-bg-1 dark:bg-button-bg-1-dark text-primary dark:text-primary-dark font-medium px-2 rounded-xl hover:-translate-y-1">
             FAQ
