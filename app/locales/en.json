@@ -1,100 +1,98 @@
 {
-    "header": {
-        "faq": "Frequently Asked Questions!",
-        "stats": "Stats",
-        "lost_progress_confirm": "If you're playing, your progress will be lost!"
+  "header": {
+    "faq": "frequently asked questions!",
+    "stats": "stats",
+    "lost_progress_confirm": "if you're playing, your progress will be lost!"
+  },
+
+  "game": {
+    "to": "to",
+
+    "title": {
+      "convert": "convert",
+      "numbers": "numbers",
+      "from": "{from} numbers",
+      "to": "{to} numbers"
     },
 
-    "game": {
-        "to": "to",
-        
-        "title": {
-            "convert": "convert",
-            "numbers": "numbers",
-            "from": "{from} numbers",
-            "to": "{to} numbers"
-        },
+    "binary": "binary",
+    "binarys": "binary",
+    "decimal": "decimal",
+    "decimals": "decimal",
 
-        "binary": "binary",
-        "binarys": "binary",
-        "decimal": "decimal",
-        "decimals": "decimal",
-   
-        "hex": "hexadecimal",
-        "hexs": "hexadecimals",
+    "hex": "hexadecimal",
+    "hexs": "hexadecimals",
 
-        "score": "Your score",
+    "score": "your score",
 
-        "difficulty": "Difficulty",
+    "difficulty": "difficulty",
 
-        "hard": "hard",
+    "hard": "hard",
 
-        "medium": "medium",
+    "medium": "medium",
 
-        "easy": "easy",
+    "easy": "easy",
 
-        "extreme": "extreme",
+    "extreme": "extreme",
 
-        "god": "I am a god!",
+    "god": "i am a god!",
 
-        "rounds": "rounds"
-    },
+    "rounds": "rounds"
+  },
 
-    "result": {
-        "congratulations": "Congratulations!",
-        "goodtry": "Good try!",
-        "copied_to_clipboard": "Copied to clipboard!",
-        "click_to_copy": "click to copy and share your result",
-        "play_again": "Play again",
-        "result": "Your result is",
-      
-        "share": {
-            "copied": "I scored {score} out of {rounds} in the baseschallenge game! 😁\n\nPlay now at https://baseschallenge.vercel.app/ 🚀",
-            "shared": "I scored {score} out of {rounds} in the baseschallenge game! 😁",
-            "not_supported": "Share not supported in this browser!"
-        }
-    },
+  "result": {
+    "congratulations": "congratulations!",
+    "goodtry": "good try!",
+    "copied_to_clipboard": "copied to clipboard!",
+    "click_to_copy": "click to copy and share your result",
+    "play_again": "play again",
+    "result": "your result is",
 
-
-    "faq": {
-        "title": "Frequently Asked Questions",
-        "q1": {
-            "title": "How does the baseschallenge game work?",
-            "description": "The game randomly generates five numbers in a specific format: hexadecimal, binary, or decimal. your task is to convert these numbers to the other selected format."
-        },
-        "q2": {
-            "title": "What is the purpose of the game?",
-            "description": "The game is designed to help you practice converting numbers between different bases. this is a useful skill for computer science students and professionals."
-        },
-        "q3": {
-            "title": "How do I play the game?",
-            "description": "Simply enter the number in the input field and press Enter or click the submit button. if your answer is correct, you will earn a point. if not, the correct answer will be displayed."
-        },
-        "q4": {
-            "title": "How do I convert a number to another base?",
-            "description": "You can use the built-in calculator on your computer or use an online converter. Alternatively, you can use the game to practice and improve your skills."
-        },
-        "q5": {
-            "title": "How do I know my score?",
-            "description": "Your score will be displayed at the bottom of the game screen. you will earn a point for each correct answer."
-        },
-        "q6": {
-            "title": "PWA support?",
-            "description": "Yes, the game is a progressive web app (PWA) and can be installed on your device for offline use."
-        },
-        "q7": {
-            "title": "What is the game inspired by?",
-            "description": "The game is inspired by the css2wind.com game. a fun way to practice CSS and Tailwind CSS skills. made by @LukeberryPi."
-        }
-    },
-
-    "stats": {
-        "title": "Statistics",
-        "new_number_generated": "Times you have generated a new number",
-        "guessed_numbers": "Times you have guessed the number",
-        "reset": "Reset",
-
-        "reset_stats_confirm": "Are you sure? Doing this will reset all your statistics!"
+    "share": {
+      "copied": "I scored {score} out of {rounds} in the baseschallenge game! 😁\n\nPlay now at https://baseschallenge.vercel.app/ 🚀",
+      "shared": "I scored {score} out of {rounds} in the baseschallenge game! 😁",
+      "not_supported": "Share not supported in this browser!"
     }
+  },
 
+  "faq": {
+    "title": "frequently Asked Questions",
+    "q1": {
+      "title": "how does the baseschallenge game work?",
+      "description": "the game randomly generates five numbers in a specific format: hexadecimal, binary, or decimal. your task is to convert these numbers to the other selected format."
+    },
+    "q2": {
+      "title": "what is the purpose of the game?",
+      "description": "the game is designed to help you practice converting numbers between different bases. this is a useful skill for computer science students and professionals."
+    },
+    "q3": {
+      "title": "how do I play the game?",
+      "description": "simply enter the number in the input field and press Enter or click the submit button. if your answer is correct, you will earn a point. if not, the correct answer will be displayed."
+    },
+    "q4": {
+      "title": "how do I convert a number to another base?",
+      "description": "you can use the built-in calculator on your computer or use an online converter. alternatively, you can use the game to practice and improve your skills."
+    },
+    "q5": {
+      "title": "how do I know my score?",
+      "description": "your score will be displayed at the bottom of the game screen. you will earn a point for each correct answer."
+    },
+    "q6": {
+      "title": "PWA support?",
+      "description": "yes, the game is a progressive web app (PWA) and can be installed on your device for offline use."
+    },
+    "q7": {
+      "title": "what is the game inspired by?",
+      "description": "the game is inspired by the css2wind.com game. a fun way to practice CSS and Tailwind CSS skills. made by @LukeberryPi."
+    }
+  },
+
+  "stats": {
+    "title": "statistics",
+    "new_number_generated": "times you have generated a new number",
+    "guessed_numbers": "times you have guessed the number",
+    "reset": "reset",
+
+    "reset_stats_confirm": "are you sure? doing this will reset all your statistics!"
+  }
 }
